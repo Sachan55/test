@@ -24,3 +24,7 @@ else{
 	var storedName = localStorage.getItem('name');
 	myHeading.textContent = 'Mozilla is cool, ' + storedName;
 }
+
+mybutton.onclick = function(){
+	setUserName();
+}
