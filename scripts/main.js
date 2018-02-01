@@ -1,2 +1,10 @@
-var head = document.querySelector('h1');
-head.textContent = 'hello world';
+var myImage = document.querySelector('img');
+
+myImage.onclick = function() {
+    var mySrc = myImage.getAttribute('src');
+    if(mySrc === 'images/firefox-icon.png') {
+      myImage.setAttribute ('src','images/chrome.png');
+    } else {
+      myImage.setAttribute ('src','images/firefox-icon.png');
+    }
+}
