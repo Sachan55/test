@@ -8,23 +8,20 @@ myImage.onclick = function() {
       myImage.setAttribute ('src','images/firefox-icon.png');
     }
 }
-var mybutton = document.querySelector('button');
+var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
-
 function setUserName(){
          var myname = prompt('please enter your name : ');
          localStorage.setItem('name' , myname);
-         myHeading.textContent = 'mozilla is cool, ' + myname;
+         myHeading.innerHTML = 'mozilla is cool, ' + myname;
 }
-
 if(!localStorage.getItem('name')){
 	setUserName();
 }
 else{
 	var storedName = localStorage.getItem('name');
-	myHeading.textContent = 'Mozilla is cool, ' + storedName;
+	myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
 }
-
-mybutton.onclick = function(){
+myButton.onclick = function(){
 	setUserName();
 }
