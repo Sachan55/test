@@ -8,3 +8,11 @@ myImage.onclick = function() {
       myImage.setAttribute ('src','images/firefox-icon.png');
     }
 }
+var mybutton = document.querySelector('button');
+var myHeading = document.querySelector('h1');
+
+function setUserName(){
+         var myname = prompt('please enter your name : ');
+         localStorage.setItem('name' , myname);
+         myHeading.textContent = 'mozilla is cool, ' + myname;
+}
